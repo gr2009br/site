@@ -1,0 +1,119 @@
+#pcl{
+    display: flex;
+    background-color: rgb(51, 51, 209);
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-radius: 6px;
+    width: 45%;
+    font-size: 10px;
+    
+}
+#total{
+display: flex;
+bottom: 20px;
+
+}
+#titulo{
+    width: 0px;
+}
+#lista_proteinas{  
+    margin:0px;
+}
+#lista_carboidratos{
+    margin:0px;
+}
+#lista_legumes{
+    margin:0px;
+}
+#lista_todos_os_itens{
+    background-color: red;
+    width: 41%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 2px;
+}
+
+#itens_lista{
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: 12px;  
+    padding-left: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn-excluir{
+    width: 1%;
+}
+.btn-excluir1{
+    width: 3%;
+}
+.cardapio_semanal{
+    background-color: blue;
+    width: 22%;
+    height: 130px;
+    padding: 8px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    float:left
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px;
+}
+#titulo{
+    position: relative;
+    left: 4px
+}
+#valor_total{
+
+    text-align: right;
+    padding-top: 9px;
+}
+
+#lista_selecionada{
+    position: absolute;
+    top:460px;
+    left: 40px;
+    width: 41%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 2px;
+}
+#lista_selecionada1{
+    position: absolute;
+    top:460px;
+    left: 40px;
+    background-color: red;
+    width: 41%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: px;
+}
+#valor_total{
+    position: absolute;
+    top:430px;
+    left: 470px;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+#valor_total2{
+    position: relative;
+    left: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+#valor_total22{
+    position: relative;
+    left: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
