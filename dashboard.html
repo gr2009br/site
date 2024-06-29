@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Meus Dashboards</title>
+<link rel="icon" type="image/x-icon" href="./public/images/favicon.ico">
+<link rel="stylesheet"  href="./public/css/estilos_css.css" type="text/css"/>
+
+</head>
+
+<body>
+<script  src="./public/javascript/dashboards.js"></script>
+<header id="header-pagina-inicial-e-final">
+<p >Alimentos & Alimentos</p> 
+</header>
+<img id="fundo_dashboard" src="./public/images/fundo-site.jpg" alt="">
+<div style="display: flex;flex-direction:column;align-items:  center;">
+<div id='container-caixa-limite'>
+
+<div class="agrupar-botoes">
+    <text class="rotulo">Itens que não foram entregues</text>
+<a  href='./index.html'> <text id="sair">Sair</button></a>
+</div>
+<div class="sep-lista-graficos">
+
+<p id="itens_dashboard"></p>
+
+<div class='agrupar-grafico-indicadores'>
+<div style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
+<p id="itens_dashboard3">Total de Pedidos</p>
+<p id="itens_dashboard2">Total de Pedidos</p>
+<p id="itens_dashboard1">Total de Pedidos</p>
+</div>
+<div style="display: flex;flex-direction:row;flex-direction:row;justify-content: center;">
+<div id="container"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script  src="./public/javascript/atualizar_dashboard.js"></script>
+<script  src="./node_modules/socket.io/client-dist/socket.io.js"></script>
+<script type="module" src="./public/javascript/dashboards.js"></script>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
+</body>
+</html>
+
+<br>
+

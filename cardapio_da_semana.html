@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Cardápio da Semana</title>
+<link rel="icon" type="image/x-icon" href="./public/images/favicon.ico">
+<link rel="stylesheet"  href="./public/css/estilos_css.css" type="text/css"/>
+</head>
+
+<body>
+<header>
+
+<p>Cardápio da Semana</p>
+<div id="header-carrinho-valor-total">      
+    <img id="exibir-carrinho" src="./public/images/btn-carrinho.png" alt="">
+<text id="valor_total">Valor total: 0,00</text>
+</div>  
+</header>
+<div class="posicao_carrinho">
+<div>
+<div id="itens_carrinho_fechado" style='background-color: white;'>
+</div>
+</div>
+<button  class="ir-para-tela-inicial"  onclick="telaInicial()">Ir para a página principal</button>
+<img id="fundo_cardapio_semanal" src="./public/images/fundo-site.jpg" alt="">
+
+
+
+
+<div id="b0">
+<button class="dia-da-semana" onclick="selecionarDiaDaSemana(this)">   
+Segunda
+</button>
+<button class="dia-da-semana" onclick="selecionarDiaDaSemana(this)">   
+Terça
+</button>
+<button class="dia-da-semana" onclick="selecionarDiaDaSemana(this)">   
+Quarta
+</button>
+<button class="dia-da-semana" onclick="selecionarDiaDaSemana(this)">   
+Quinta
+</button>
+<button class="dia-da-semana" onclick="selecionarDiaDaSemana(this)">   
+Sexta
+</button>
+</div>
+<div>
+<div class="b2">
+
+    <div class="b2-t1">
+    <text>Primeiro, clique no tamanho da marmita, para poder selecionar os itens, depois selecione os itens e se quiser repetir a marmita, clique em <h5>"Selecione a quantidade"</h5> e para finalizar clique no botão <h5>"Finalizar marmita"</h5></text>
+</div>
+<div class="btn-tamanho">
+<button id="btn-grande" onclick="obter_valor(this)">
+Grande R$ 21,99
+</button>
+
+<button id="btn-media" onclick="obter_valor(this)">
+Media R$ 19,99
+</button>
+
+
+<button id="btn-pequena" onclick="obter_valor(this)">
+Pequena R$ 17,99
+</button>
+</div>
+
+<div class="quantidade_marmitas_semanais">
+Selecione a quantidade
+<select id='quantidade_marmitas_semanais_cardapio_semanal'>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+
+</select>
+</div>
+
+</div>
+<div class="b1">
+<div class="b-00">
+     
+<div class="informacao_cardapio_do_dia">
+<p id="dia-selecionado"></p>
+<p class="texto_itens_do_dia outra">Principal</p>
+<span>
+<input type="radio" id="item" name="principal"/>
+<p class="texto_itens_do_dia">Picadinho</p>
+</span>
+<span>
+<input type="radio" id="item" name="principal"/>
+<p class="texto_itens_do_dia">Filé de frango</p>
+</span>
+<p class="texto_itens_do_dia outra">Padrão</p>
+<span>
+    <input type="radio" id="item" name="padrao"/>
+<p class="texto_itens_do_dia">Arroz/Feijao</p>
+</span>
+<span>
+    <input type="radio" id="item" name="padrao"/>
+<p class="texto_itens_do_dia">Arroz</p>
+</span>
+<span>
+    <input type="radio" id="item" name="padrao"/>
+<p class="texto_itens_do_dia">Macarrão alho e óleo</p>
+</span>
+<p class="texto_itens_do_dia outra">Guarnições</p>
+<span>
+    <input type="checkbox" id="item" name="guarnicao"/>
+<p class="texto_itens_do_dia">Batata rústica</p>
+</span>
+<span>
+    <input type="checkbox" id="item" name="guarnicao"/>
+<p class="texto_itens_do_dia">Farofa</p>
+</span>
+<p class="texto_itens_do_dia outra">Salada</p>
+<span>
+<p class="texto_itens_do_dia">Salada</p>
+</span>
+</div>
+
+<div class="imagens_cardapio_semanal">
+<img class="imagem" src="./public/images/ingredientes/file_de_frango.jpg" >    
+<img class="imagem" src="./public/images/ingredientes/picadinho.jpg" >  
+</div>
+
+</div>
+
+<div class="laranja-estendido">
+    <button id="finalizar_kit_marmita" >Finalizar</button>
+</div>
+<div>
+
+</div>
+<div style="text-align: center;">
+</div>
+</div>
+</div>
+
+
+
+<div id="lista_selecionada">
+
+    </div>
+</div>
+
+<script src="./node_modules/socket.io/client-dist/socket.io.js"></script>
+<script  src="./public/javascript/gera_ID_aleatorio_a_cada_acesso.js"></script>
+<script  src="./public/javascript/cardapio_da_semana.js"></script> 
+
+
+</body>
+</html>
+

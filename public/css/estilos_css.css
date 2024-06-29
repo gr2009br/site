@@ -1,0 +1,1131 @@
+html {
+    scroll-behavior: smooth;
+    }
+    body{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+    
+    }
+    #header-pagina-inicial-e-final{
+    justify-content:center;
+    z-index: 4;
+    }
+    header{
+    display: flex;
+    font-size: 0.8em;
+    justify-content: space-between;
+    background-color: rgb(14, 14, 81);
+    color: white;
+    left:3px;
+    height: 2rem;
+    position: fixed;
+    top:0;
+    width: 99.3%;
+    z-index: 200;
+    padding: 2px;  
+    align-items: center; 
+    }
+    #msg-boas-vindas-area_admin{
+    position: relative;
+    top:19.3rem;
+    z-index: 3;
+    width: 10rem;
+    text-align: center;
+    }
+    .btn-pagina-admin{
+    width: 18rem;
+    }
+    .agrupar-botoes-pagina-admin{
+    top:4rem;
+    position: relative;
+    display: flex;
+    align-items:  center;
+    flex-direction: column;
+    }
+    .caixa1-pagina-admin{
+    position: relative;
+    top:1rem;
+    width: 17rem;
+    }
+    .texto1-pagina-admin{
+    position: relative;
+    top:1rem;
+    width: 17rem;
+    color: white;
+    }
+    .texto2-pagina-admin{
+    position: relative;
+    top:2rem;
+    width: 17rem;
+    color: white;
+    }
+    .caixa2-pagina-admin{
+    position: relative;
+    top:2rem;
+    width: 17rem;
+    }
+    .botao-pagina-admin{
+    position: relative;
+    top:4rem;
+    width: 18rem;
+    }
+    .msg-erro-mysql{
+    text-align: center;
+    }
+    /*layout celular na vertical ajustando os itens para esse layout - index.html*/
+    @media screen and  (min-height:316px) {
+    
+    .btn-pagina-inicial{
+    height: 200px;
+    width: 300px;
+    }
+    .agrupar-botoes-pagina-inicial{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 50px;
+    gap: 30px;
+    }
+    .t-pagina-inicial{
+    display: flex;
+    background-color:black;
+    color:white;
+    position: absolute;
+    left:0px;
+    top:-16px;
+    z-index: 3;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0%;
+    }
+    .t-pagina-inicial:hover{
+    opacity: 70%;
+    }
+    }
+    /*layout celular na horizontal ajustando os itens para esse layout - index.html*/
+    @media screen and  (max-height:316px) {
+    
+    .btn-pagina-inicial{
+    height: 200px;
+    width: 300px;
+    }
+    .agrupar-botoes-pagina-inicial{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 5px;
+    gap: 30px;
+    }
+    .t-pagina-inicial{
+    display: flex;
+    background-color:black;
+    color:white;
+    position: absolute;
+    left:0px;
+    top:-16px;
+    z-index: 3;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0%;
+    }
+    .t-pagina-inicial:hover{
+    opacity: 70%;
+    }                                       
+                
+    }
+    
+        .forma_pagamento{
+            position: relative;
+            top:-2rem;
+            left: 0rem;
+            display: flex;
+            justify-content: end;
+    
+        }
+    .forma_pagamentoo{
+        position: relative;
+        left: -4rem;
+        top:0rem;
+    }
+    #container{
+    height: 360px;
+     width: 560px;
+     position: relative;
+    }
+    
+    
+    
+    .rotulo{
+        background-color: #0E0E51;padding: 0.7rem;color:white ;position:relative;top:-2.1rem;text-wrap: nowrap;
+    }
+    #sair{
+        background-color: #0E0E51;padding: 0.7rem;color:white ;position:relative;top:-1.4rem;
+    }
+    
+    /*página dashboard.html*/
+    @media screen and  (max-width:559px){
+        #itens_dashboard{
+        width:80vw;
+        position: relative;
+        top:0.2rem;
+        background-color: white;
+        padding: 2rem;
+        height: 34rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+    
+        }
+        #container{
+            width: 80vw;
+        }
+        .sep-lista-graficos{
+            gap:0rem;
+            position: relative;top:6rem; display: flex;flex-wrap: wrap;justify-content: space-around;top:1.1rem;
+        }
+    }
+    @media screen and (min-width:559px){
+        #itens_dashboard{
+            position: relative;
+            top:0.2rem;
+            background-color: white;
+            padding: 2rem;
+            width: 30rem;
+            height: 34rem;
+            overflow-y: auto;
+            overflow-x: hidden;
+            
+            
+            }
+            .sep-lista-graficos{
+                gap:0rem;
+                position: relative;top:6rem; display: flex;flex-wrap: wrap;justify-content: space-around;top:1.1rem;
+            }
+    }
+    /*página dashboard.html*/
+    @media screen and  (max-width:1424px){
+        .agrupar-botoes{
+            position: relative;top:4rem; display: flex;flex-wrap: nowrap;justify-content: center;
+        }
+        .sep-lista-graficos{
+            position: relative;top:6rem; display: flex;flex-wrap: wrap;justify-content: space-around;top:1.1rem; gap: 15rem;
+        }
+        .agrupar-grafico-indicadores{
+            display: flex;flex-direction: column;align-content: center;flex-wrap: wrap;position: relative;top:-10rem;
+        }
+    }
+    /*página dashboard.html*/
+    @media screen and  (min-width:1424px){
+        .agrupar-botoes{
+            position: relative;top:4rem; display: flex;flex-wrap: nowrap;justify-content: space-between;
+        }
+        .sep-lista-graficos{
+            position: relative;top:6rem; display: flex;flex-wrap: wrap;justify-content: space-around;top:1.1rem; gap: 15rem;
+        }
+        .agrupar-grafico-indicadores{
+            display: flex;flex-direction: column;align-content: center;flex-wrap: wrap;position: relative;
+        }
+    }
+    
+    
+    
+    #itens_dashboard1{
+    background-color: gray;
+    color: white;
+    padding: 2rem;
+    width: 9rem;
+    height:5rem;
+    text-align: center;
+    position: relative;
+    }
+    #itens_dashboard2{
+    background-color: rgb(32, 76, 32);
+    color: white;
+    padding: 2rem;
+    width: 9rem;
+    height:5rem;
+    text-align: center;
+    position: relative;
+    }
+    
+    #itens_dashboard3{
+    background-color:rgb(75, 26, 26);
+    color:white;
+    padding: 2rem;
+    width: 9rem;
+    height:5rem;
+    text-align: center;
+    position: relative;
+    }
+    
+    #msg-boas-vindas{
+    position: relative;
+    top:28px;
+    text-align: center;
+    z-index: -10;
+    background-color: brown;
+    color: white;
+    padding: 4px;
+    width: 102%;
+    }
+    #alinhar_msg{
+    display: flex;
+    justify-content: center;
+    }
+    #alinhar_msg_admin{
+    display: flex;
+    justify-content: center;
+    height: 0.8rem;
+    }
+    #header-carrinho-valor-total{
+    display: flex;
+    padding-right: 1rem;
+    gap:2px;
+    align-items: center; 
+    }
+    #exibir-carrinho{
+    height: 2rem;
+    }
+    #exibir-admin{
+    height: 2rem;  
+    }
+    a{
+    text-decoration: none;
+    position: relative;
+    height: 0rem;
+    }
+    .ir-para-tela-inicial{
+    top:-2px;
+    color: white;
+    position: relative;
+    background-color: darkblue;
+    border-width: 0px;
+    padding: 0.4rem;
+    }
+    .ir-para-tela-inicial-pagamento{
+    top:2.3rem;
+    color: white;
+    position: relative;
+    background-color: darkblue;
+    border-width: 0px;
+    padding: 0.4rem; 
+    z-index: 0;
+    }
+    #bloco{
+    display: flex;
+    padding: 0.2rem;
+    left: 0px;
+    top:-4px;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    }
+    .blocos{
+    background-color:rgb(14, 14, 81);
+    color:white;
+    padding:1rem;
+    width: 315px;
+    text-wrap: nowrap;
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-top: 30px;
+    left: 2px;
+    pointer-events: auto;
+    text-wrap: wrap;
+    z-index: 30;
+    }
+    .escurecer_bloco{
+    background-color:gray;
+    color:black;
+    padding:1rem;
+    width: 315px;
+    text-wrap: nowrap;
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-top: 30px;
+    left: 2px;
+    pointer-events: none;
+    }
+    .pisca_pisca_aviso{
+    background-color: red;
+    }
+    .dia_destaque{
+    background-color:red;
+    color:white;
+    padding:1rem;
+    width: 95%;
+    text-wrap: wrap;
+    border-radius: 0px;
+    left: 1px;
+    pointer-events: auto;
+    border: 0px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    }
+    .dia-da-semana{
+    background-color:rgb(14, 14, 81);
+    color:white;
+    width: 40rem;
+    border-radius: 0px;
+    border: 0px;
+    padding: 8px;
+    height: 40px;
+    }
+    .dia-da-semana:hover{
+    background-color:black;
+    color:white;
+    border: 0px;
+    }
+    .b-00{
+    background-color:rgb(35, 35, 135);
+    width: 40rem;
+    height: 23rem;
+    position: relative;
+    top:0rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    }
+    span{
+    display: flex;
+    user-select: none;
+    width: 300px;
+    }
+    #b0{
+    display: flex;
+    justify-content: center;
+    }
+    .b1{
+    display: flex;
+    top:1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content:center;
+    text-wrap: wrap;
+    }
+    .b2{
+    position: relative;
+    color:white;
+    width: 100%;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    top:1.8rem;
+    background-color: transparent;
+    }
+    #dia-selecionado{
+    color:white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 1.8rem;
+    left: -45%;
+    z-index: 1;
+    width: 18rem;
+    }
+    .texto_itens_do_dia{
+    color: white;
+    margin: 1.5px;
+    font-size: large;
+    }
+    .outra{
+    font-weight: 200;
+    font-weight: bold;
+    margin:0px;
+    color: white;
+    background-color: chocolate;
+    user-select:none;
+    font-size: larger;
+    }
+    .dia_destaque{
+    background-color: rgb(123, 9, 9);
+    }
+    .informacao_cardapio_do_dia{
+    position: relative;
+    width: 12rem;
+    padding-left: 4rem;
+    align-items:flex-start;
+    color: white;
+    text-align: center;
+    }
+    .imagens_cardapio_semanal{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    position: relative;
+    flex-direction: column;
+    width: 20rem;
+    align-items: center;
+    top:2rem;
+    }
+    .imagem{
+    height: 7rem;
+    border-radius: 7px;
+    width: 10rem;
+    z-index: 1;;
+    }
+    .b2-t1{
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    }
+    .btn-tamanho{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-wrap: wrap;
+    flex-wrap: wrap;
+    left: 30rem;
+    top:1rem;
+    margin: px;
+    }
+    #item{
+    height: 15px;
+    width: 12px;
+    }
+    #btn-grande{
+    width: 9rem;
+    height: 1.4rem;
+    text-wrap: nowrap;
+    }
+    #btn-media{
+    width: 9rem;
+    height: 1.4rem;
+    text-wrap: nowrap;
+    }
+    #btn-pequena{
+    width: 9rem;
+    height: 1.4rem;
+    text-wrap: nowrap;
+    }
+    .laranja-estendido{
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    }
+    .quantidade_marmitas_semanais{
+    display: flex; 
+    background-color: transparent;
+    height: 100px;
+    padding-left: 5px;
+    padding-top: 2px;
+    justify-content: center;
+    align-items: center;
+    }
+    .modo_de_usar{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color:white;
+    }
+    .lista_selecionada{
+    color:white;
+    position: relative;
+    width: 100%;
+    }
+    #lista_selecionada{
+    color:white;
+    position: relative;
+    width: 100%;
+    top:20px;
+    background-color: transparent;
+    }
+    .item_da_lista_selecionada{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 0.7rem;
+    padding-top: 1rem;
+    background-color: transparent;
+    opacity: 0.9;
+    }
+    #finalizar_kit_marmita{
+    position: relative;
+    text-align: center;
+    }
+    .finalizar_marmitas-t1{
+    position: relative;
+    left: 2rem;
+    top:10px;
+    z-index: 5;
+    width: 30%;
+    }
+    .finalizar_marmitas-t2{
+    position: relative;
+    left: 2rem;
+    top:10px;
+    z-index: 5;
+    width: 130px;
+    display: flex;
+    text-wrap: wrap;
+    }
+    .finalizar_marmitas-t3{
+    position: relative;
+    left: 2rem;
+    top:10px;
+    z-index: 5;
+    width: 2rem;
+    margin-bottom: 30px;
+    }
+    .finalizar_marmitas-t3{
+    position: relative;
+    left: 2rem;
+    top:10px;
+    z-index: 5;
+    width: 2rem;
+    margin-bottom: 30px;
+    }
+    select{
+    background-color: white;
+    }
+    .ingredientes{    
+    width: 12rem;
+    }
+    text{
+    text-wrap: wrap;
+    }
+    .btn-excluir_EXCLUIR{
+    display: flex;
+    background-color: white;
+    color:black;
+    font-weight: bold;
+    width: 4rem;
+    padding: 0.3rem;
+    text-wrap: nowrap;
+    user-select: none;
+    }
+    .btn-excluir{
+    width: 1rem;
+    }
+    .btn-editar_item{
+    width: 0.7rem;
+    }
+    #itens_carrinho_fechado{
+    background-color: blue;
+    padding: 0.7rem;
+    border-radius: 3px;
+    color:white;
+    overflow: auto;
+    }
+    #itens_carrinho_aberto{
+    background-color: blue;
+    padding: 0.7rem;
+    border-radius: 3px;
+    color:white;
+    }
+    .posicao_carrinho{
+    position: relative;
+    top:30px;
+    }
+    #main{
+    position: relative;
+    top: 100px;
+    text-align: center;
+    }
+    table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    }
+    .usario_pode_selecionar{
+    pointer-events:none;
+    }
+    .cabecalho_tabela{
+    background-color: red;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-wrap: nowrap;
+    min-width:6rem;
+    max-width: 9rem;
+    width: 9rem;
+    font-size: small;
+    }
+    .linhas_tabela{
+    background-color: rgb(8, 8, 151);
+    text-align: center;
+    text-wrap: nowrap;
+    font-size: small;
+    min-width:6rem;
+    max-width: 9rem;
+    width: 9rem;
+    height: 28px;
+    }
+    #fundo_pagina_inicial{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0rem;
+    left: 0rem;
+    z-index: -99;
+    }
+    #fundo_cardapio_semanal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0rem;
+    top:6rem;
+    filter: blur(2px);
+    z-index: -10;
+    }
+    #fundo_monte_sua_marmita{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0rem;
+    filter: blur(2px);
+    z-index: -10;
+    }
+    #fundo_pagina_cadastro{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0rem;
+    top:0rem;
+    filter: blur(2px);
+    }
+    #fundo_dashboard{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0rem;
+    top:0rem;
+    filter: blur(2px);
+    }
+    .lista_selecionada{
+    opacity: 0.9;
+    background-color: transparent;
+    }
+    .pgto{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    background-color: rgb(82, 82, 10);
+    top:2.68rem;
+    color: white;
+    position: relative;
+    width: 20rem;
+    height:  20rem;
+    padding: 1rem;
+    text-wrap: wrap;
+    visibility:hidden;
+    }
+    .pgto_visivel{
+    visibility:visible;
+    }
+    #qrCode{
+    position: absolute;
+    top:2.2rem;
+    left: 1rem;
+    width: 10rem;
+    height: 10rem;
+    }
+    
+    .qr_code{
+    width: 10rem;
+    height: 10rem;
+    }
+    .qr_code_copiado{
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    }
+    /*layout celular na vertical ajustando o formulário dos dados do cliente para esse layout - cadastro.html*/
+    @media screen and  (max-width:671px) {
+    .itens_cadastro{
+    position: absolute;
+    top:5rem;   
+    background-color: rgb(82, 82, 10);
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    color: white;
+    width:22rem;
+    display: flex;
+    justify-content: center;
+    
+    }
+    
+    
+    
+    #coluna0{
+    left:0.3rem;
+    }
+    #coluna1{
+    left:0.3rem;
+    }
+    #alinhar_botao{ /*não estava colocando a div coluna1 embaixo da div coluna0, pois essa div está englobando as div's coluna0 e coluna1*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: max-content;
+    
+    }
+    #cadastro{
+    position: relative;
+    left:0.3rem;
+    top:0.7rem;
+    }
+    
+    
+    }
+    /*layout celular na horizontal ajustando o formulário dos dados do cliente para esse layout - cadastro.html*/
+    @media screen and  (min-width:671px) {
+    .itens_cadastro{
+    
+    position: absolute;
+    top:5rem;   
+    background-color: rgb(82, 82, 10);
+    padding-bottom: 1rem;
+    padding-top: 3rem;
+    color: white;
+    width:42rem;
+    height:20rem;
+    display: flex;
+    justify-content: center;
+    
+    }
+    
+    #alinhar_botao{/*não estava colocando a div coluna1 embaixo da div coluna0, pois essa div está englobando as div's coluna0 e coluna1*/
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 18rem;
+    }
+    #cadastro{
+    position: absolute;
+    left:1.5rem;
+    width: 39rem;
+    top:19.5rem;
+    }
+    #coluna0{
+    padding-right:1.1rem;
+    height: 18rem;
+    }
+    #coluna1{
+    padding-left:1.1rem;
+    height: 18rem;
+    }
+    
+    }
+    text{
+    font-weight: bold;
+    }
+    input{
+    width: 15rem; 
+    background-color: white;
+    padding: 8px;
+    border: none;
+    font-weight: bolder;
+    }
+    .input_label{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom:3px;
+    left: 0px;
+    text-wrap: nowrap;
+    width: 30px;
+    font-size: 14px;
+    }
+    #endereco{
+    width: 110px;
+    }
+    #numero{
+    width: 60px;
+    }
+    #endereco-numero{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    top:0px;
+    left: 0px;
+    width: 100px;
+    }
+    #endereco__{
+    position: relative;
+    width:200px;
+    }
+    #numero__{
+    position: relative;
+    width:50px;
+    left: -20px;
+    }
+    #complemento{
+    
+    width:240px;
+    }
+    #verificou_numeroendereco{
+    width: 120px;
+    }
+    #forma_de_pagamento{
+    width: 19rem;
+    }
+    .msg{
+    visibility: hidden;
+    z-index: -100;
+    }
+    #checkbox{
+    width:2rem;
+    }
+    .sem_selecionarr{
+    background-color: gray;
+    visibility: visible;
+    position: absolute;
+    width: 100%;
+    left:-1.2px;
+    height:44.99rem;
+    z-index: 3;
+    opacity:60%;
+    transition-duration: 0.7s;
+    }
+    .msg_visivel{
+    visibility:visible;
+    position: absolute;
+    background-color: rgb(99, 9, 9);
+    top:8rem;
+    color: white;
+    font-size: large;
+    padding: 2rem;
+    text-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    transition-duration: 0.7s;
+    }
+    #comprovante{
+    height: .8rem;
+    width: 12rem;
+    }
+    #enviar_comprovante{
+    position: relative;
+    left:1rem;
+    width: 6rem;
+    height: 1.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #coluna0{
+    position: relative;
+    width: 260px;
+    padding-right: 2.5rem; 
+    }
+    #coluna1{
+    position: relative;
+    width: 260px;
+    padding-right: 2.5rem;
+    }
+    .formulario_oculto{
+    visibility: hidden;
+    z-index: -22;
+    }
+    .cardapio{
+    background-color: rgb(5, 5, 46);
+    color: white;
+    padding: 2.7rem;
+    }
+    .botao_marcar_como_entregue{
+    background-color: rgb(4, 62, 4);
+    color: white;
+    padding: 1.2rem;
+    border-radius: 4px;
+    border: unset;
+    position: relative;
+    left:4rem;
+    top:-1rem;
+    }
+    /*layout tela admin horizontal admin.html*/
+    @media screen and  (max-height:595px) {
+    
+    .btn-pagina-admin{
+        position: relative;
+        left: -12rem;
+    }
+    #msg-boas-vindas-area_admin{
+        position: relative;
+        left: -12rem;
+    }
+    
+    .texto1-pagina-admin{
+        position: relative;
+        top: -18rem;
+        left: 7rem;
+    }
+    #email{
+        position: relative;
+        top: -16.2rem;
+        left: 14.5rem;
+        z-index: 3;
+        width: 25px;
+    }
+    .caixa2-pagina-admin{
+        position: relative;
+        top: -18rem;
+        left: 7rem;
+    }
+    
+    .texto2-pagina-admin{
+        position: relative;
+        top: -18rem;
+        left: 7rem;
+    }
+    #senha{
+        position: relative;
+        top: -16.2rem;
+        left: 14.5rem;
+        z-index: 3;
+        width: 25px;
+    }
+    .caixa1-pagina-admin{
+        position: relative;
+        top: -18rem;
+        left: 7rem;
+    }
+    .botao-pagina-admin{
+        position: relative;
+        top: -16rem;
+        left: 7rem;
+    }
+    }
+    /*layout tela admin vertical admin.html*/
+    @media screen and  (min-height:595px) {
+    
+        
+    
+        #email{
+            position: relative;
+            width: 29px;
+            top: 2.9rem;
+            left: 7.4rem; 
+            z-index:10
+        }
+    
+        #senha{
+            position: relative;
+            width: 29px;
+            top: 3.9rem;
+            left: 7.4rem; 
+            z-index:10
+        }
+        .botao-pagina-admin{
+            position: relative;
+            top: 5rem;
+            left: 0rem;
+            margin-bottom: 7rem;
+        }
+        .agrupar-botoes-pagina-admin{
+            position: relative;
+            top:4rem;
+        }
+        #msg-boas-vindas-area_admin{
+            position: relative;
+            top:19.5rem;
+        }
+    
+    }
+    #mensagem_recurso_nao_encontrado{
+            color:white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top:10rem;
+            font-size: 3rem;
+            text-align: center;
+    }  
+    #botao_recurso_nao_encontrado{
+        background-color:red;
+        color: white;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top:2rem;
+        font-size: 1.1rem;
+        border: none;
+        padding: 1.1rem;
+        
+    
+    }
+    #voltar_pagina_inicial{
+        background-color: darkblue;border: none;color: white;height: 2rem;width: 9.5rem
+    }
+    .formulario_pagamento{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        background-color: red;
+        z-index: 200;
+        top:10rem;
+    }
+    .botao-finalizar_compra{
+        position:relative;
+        top:4rem;
+        width: 100%;
+        height: 3rem;
+    }
+    .texto1{
+        font-weight: bold;
+        font-size: 1.3rem;
+       
+    }
+    .texto2{
+        font-weight: bold;
+        font-size: 0.7rem;
+        position: relative;
+        top:8rem;
+    }
+    #finalizar_compra{
+        position: relative;
+        top:4.3rem;
+    }
+    
+    /*PAGAR COM DINHEIRO, O PADRÃO É PAGAMENTO COM QR CODE*/
+    #dinheiro{
+    
+        position: relative;
+        left:1rem;
+        top:2rem; 
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 10rem;
+    }
+    
+    #troco{
+      width: 100%;
+    }
+    .botao_finalizar_compra_dinheiro{
+        position:relative;
+        top:2rem;
+        width: 100%;
+        height: 3rem;
+    }
+    .pgto_dinheiro{
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        background-color: rgb(82, 82, 10);
+        top:2.68rem;
+        color: white;
+        position: relative;
+        width: 20rem;
+        height:  10rem;
+        padding: 1rem;
+        text-wrap: wrap;
+        visibility:visible;
+    }
+    /*PAGAR COM CARTÃO, O PADRÃO É PAGAMENTO COM QR CODE*/
+    #cartao{
+    
+        position: relative;
+        left:0.5rem;
+        top:1rem; 
+    }

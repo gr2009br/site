@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Área Administrativa - Alimentos & Alimentos</title>
+<link rel="icon" type="image/x-icon" href="./public/images/favicon.ico">
+<link rel="stylesheet"  href="./public/css/estilos_css.css" type="text/css"/>
+
+</head>
+
+<body>
+<header id="header-pagina-inicial-e-final">
+<p >Alimentos & Alimentos</p> 
+</header>
+<img id="fundo_dashboard" src="./public/images/fundo-site.jpg" alt="">
+<div id="alinhar_msg_admin">
+<div id="msg-boas-vindas-area_admin">Área Administrativa<hr>Preencha seu login e senha</div>
+</div>
+<button class="ir-para-tela-inicial-pagamento">Voltar para a <i>Página Inicial</i></button>
+<div class="agrupar-botoes-pagina-admin">
+
+<img class="btn-pagina-admin" src="./public/images/pagina-admin.jpg" alt="">
+<!--<a class="botao" href="./admin.html"><button>Área do Admin</button></a> -->
+<p class="texto1-pagina-admin">Insira o seu email:</p>
+<img id='email' src="./public/images/btn-limpar-dados-formulario-admin.png">
+<input class="caixa1-pagina-admin" type="email">
+<p class="texto2-pagina-admin">Insira sua senha:</p>
+<img id='senha' src="./public/images/btn-limpar-dados-formulario-admin.png">
+<input class="caixa2-pagina-admin" type="password">
+<button class="botao-pagina-admin" >Acessar</button>
+</div>   
+
+
+<script src="./node_modules/socket.io/client-dist/socket.io.js"></script>
+<script type="module" src="./public/javascript/admin.js"></script>
+</body>
+</html>
+
+<br>
+

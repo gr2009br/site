@@ -1,0 +1,9 @@
+---->> ATENÇÃO -> NÃO É PRECISO INSTALAR O JEKYLL <<----
+
+RENOMEIE A PASTA node_modules para pacotes_instalados para que o GitHub reconheça a pasta que estão instalados os pacotes
+sem ter que instalar o
+
+Para atualizar o CSS no computador (Ctrl F5), porém para atualizar o layout no celular
+renomeie o arquivo estilos_css.css para qualquer outro nome, suba no GitHub e depois espere 5 minutos e mude para o nome correto
+(estilos_css.css) e suba novamente para o GitHub -> isso força o CSS ser atualizado no navegador do celular, sem ter
+que apagar os cookies ou o histórico do celular

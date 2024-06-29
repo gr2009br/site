@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Monte o seu cardápio</title>
+<link rel="icon" type="image/x-icon" href="./public/images/favicon.ico">
+<link rel="stylesheet"  href="./public/css/estilos_css.css" type="text/css"/>
+</head>
+
+<body>
+<header>
+
+<p>Monte seu cardápio</p>
+<div id="header-carrinho-valor-total">      
+    <img id="exibir-carrinho" src="./public/images/btn-carrinho.png" alt="">
+<text id="valor_total">Valor total: 0,00</text>
+</div>  
+</header>
+<div class="posicao_carrinho">
+<div>
+<div id="itens_carrinho_fechado" style='background-color: white;'>
+</div>
+</div>
+<button class="ir-para-tela-inicial" onclick="telaInicial()">Ir para a página principal</button>
+<img id="fundo_monte_sua_marmita" src="./public/images/fundo-site.jpg" alt="">
+
+
+<div id="bloco">
+<p></p> 
+
+<div class="blocos">
+
+<div>PROTEINAS</div>
+<text>Selecione o peso e clique no ingrediente desejado:</text>
+<div id="lista_proteinas"></div>         
+
+</div>
+
+
+<p></p> 
+<div class="blocos">
+
+<div>CARBOIDRATOS</div> 
+<text>Selecione o peso e clique no ingrediente desejado:</text>
+<div id="lista_carboidratos"></div>
+
+</div>
+
+<p></p> 
+<div class="blocos">
+
+<div>LEGUMES</div>
+<text>Selecione o peso e clique no ingrediente desejado:</text>
+<div id="lista_legumes"></div>
+
+</div>
+
+</div>
+
+<div class="itens_inseridos" id="incluir_marmitas_parciais">
+
+<div class="lista_selecionada">
+<button id="finalizar_marmitas" class="finalizar_marmitas-t1" >Finalizar este kit de marmita</button>
+<p class="finalizar_marmitas-t2">Quantidade desse kit de marmitas a repetir:</p>
+<select class="finalizar_marmitas-t3" name="qte_marmitas" id="qte_marmitas_a_fazer">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+
+</select>
+</div>
+<div id="lista_selecionada">
+</div>
+
+
+<script src="./node_modules/socket.io/client-dist/socket.io.js"></script>
+<script  src="./public/javascript/gera_ID_aleatorio_a_cada_acesso.js"></script>
+<script  src="./public/javascript/monte_seu_cardapio.js"></script>
+
+
+</body>
+</html>
+
