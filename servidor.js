@@ -723,8 +723,10 @@ await connection.query(comando, function (error, results, fields) {
 if (error) throw error;
 io.emit(`SELECIONANDO_DADOS_OBTIDOS${dados['n']}`,results)
 
+
+})
 connection.end();
-})}
+}
 
 
 
