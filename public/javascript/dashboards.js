@@ -219,40 +219,40 @@ qte_pedidos=lista.length-1
         
         if(data_inicial===data_atual){
         if(ha_x_minutos===0){
-            ha_x_minutos=`agora mesmo `
+            ha_x_minutos=` - agora mesmo `
         }
         else if(ha_x_minutos<2 && ha_x_minutos>0){
-            ha_x_minutos=`há ${ha_x_minutos} minuto `
+            ha_x_minutos=` - há ${ha_x_minutos} minuto `
         }else if(ha_x_minutos>=2 && ha_x_minutos<60){
-            ha_x_minutos=`há ${ha_x_minutos} minutos `
+            ha_x_minutos=` - há ${ha_x_minutos} minutos `
         }
         else if(ha_x_minutos==60){
-            ha_x_minutos=`há 1h `
+            ha_x_minutos= - `há 1h `
         }
         else if(ha_x_minutos>60){
-            ha_x_minutos=`há mais de 1h `
+            ha_x_minutos=` - há mais de 1h `
         }
         else if(ha_x_minutos<0){
-            ha_x_minutos=`há muito tempo`
+            ha_x_minutos=` - há muito tempo`
         }
         }else{
             ha_x_minutos=''
         }
         if(!cardapio_da_semana){
 
-            texto=`ID: ${idd[ii-1]}<br><strong>${infos[0]}</strong> - ${ha_x_minutos}<br><i>${dados_cliente}</i><br><br><div class='cardapio'>Monte sua marmita:<br> ${monte_sua_marmita.replaceAll('"','').replaceAll("'","").replaceAll(",","<br>").replaceAll(";","<br>").replaceAll(":",": ")}<br>subtotal: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
+            texto=`ID: ${idd[ii-1]}<br><strong>${infos[0]}</strong> ${ha_x_minutos}<br><i>${dados_cliente}</i><br><br><div class='cardapio'>Monte sua marmita:<br> ${monte_sua_marmita.replaceAll('"','').replaceAll("'","").replaceAll(",","<br>").replaceAll(";","<br>").replaceAll(":",": ")}<br>subtotal: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
             minimumFractionDigits:2,maximumFractionDigits:2,
             useGrouping:'always'}).format(parseFloat(valoressssss_mm[ii-1]))}<br><br><strong><text style="color:red">Valor total do pedido: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
             minimumFractionDigits:2,maximumFractionDigits:2,
             useGrouping:'always'}).format(parseFloat(valoressssss_cs[ii-1])+parseFloat(valoressssss_mm[ii-1]))}</strong></text></div>`
         }else if(!monte_sua_marmita || monte_sua_marmita==='"0"'){
 
-            texto=`ID: ${idd[ii-1]}<br><strong>${infos[0]}</strong> - ${ha_x_minutos}<br><i>${dados_cliente}</i><br><br><div class='cardapio'>Cardápio da Semana:<br><br> ${cardapio_da_semana.replaceAll(' ; ','<br>').replaceAll('; ','<br>')}<br><strong><text style="color:red">Valor total do pedido: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
+            texto=`ID: ${idd[ii-1]}<br><strong>${infos[0]}</strong> ${ha_x_minutos}<br><i>${dados_cliente}</i><br><br><div class='cardapio'>Cardápio da Semana:<br><br> ${cardapio_da_semana.replaceAll(' ; ','<br>').replaceAll('; ','<br>')}<br><strong><text style="color:red">Valor total do pedido: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
             minimumFractionDigits:2,maximumFractionDigits:2,
             useGrouping:'always'}).format(parseFloat(valoressssss_cs[ii-1])+parseFloat(valoressssss_mm[ii-1]))}</strong></text></div>`
         }else if(cardapio_da_semana && monte_sua_marmita){
           
-            texto=`ID: ${idd[ii-1]}<br><strong>${infos[0]}</strong> - ${ha_x_minutos}<br><i>${dados_cliente}</i><br><br><div class='cardapio'>Cardápio da Semana:<br><br> ${cardapio_da_semana.replaceAll(' ; ','<br>').replaceAll('; ','<br>')}<br><br>Monte sua marmita:<br> ${monte_sua_marmita.replaceAll('"','').replaceAll("'","").replaceAll(",","<br>").replaceAll(";","<br>").replaceAll(":",": ")}<br>subtotal: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
+            texto=`ID: ${idd[ii-1]}<br><strong>${infos[0]}</strong> ${ha_x_minutos}<br><i>${dados_cliente}</i><br><br><div class='cardapio'>Cardápio da Semana:<br><br> ${cardapio_da_semana.replaceAll(' ; ','<br>').replaceAll('; ','<br>')}<br><br>Monte sua marmita:<br> ${monte_sua_marmita.replaceAll('"','').replaceAll("'","").replaceAll(",","<br>").replaceAll(";","<br>").replaceAll(":",": ")}<br>subtotal: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
             minimumFractionDigits:2,maximumFractionDigits:2,
             useGrouping:'always'}).format(valoressssss_mm[ii-1])}<br><br><strong><text style="color:red">Valor total do pedido: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
             minimumFractionDigits:2,maximumFractionDigits:2,
