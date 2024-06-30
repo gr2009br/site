@@ -217,7 +217,7 @@ qte_pedidos=lista.length-1
         let ha_x_minutos = parseInt((hora_atual-horario_inicial)/60)
 
         
-
+        if(data_inicial===data_atual){
         if(ha_x_minutos===0){
             ha_x_minutos=`agora mesmo `
         }
@@ -234,6 +234,9 @@ qte_pedidos=lista.length-1
         }
         else if(ha_x_minutos<0){
             ha_x_minutos=`há muito tempo`
+        }
+        }else{
+            ha_x_minutos=''
         }
         if(!cardapio_da_semana){
 
