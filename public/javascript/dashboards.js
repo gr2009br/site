@@ -305,7 +305,7 @@ let r=soma_valor_a_receber/(soma_valor_recebido+soma_valor_a_receber)
 var chart = new CanvasJS.Chart("container", {
 	theme: "light2", // "light1", "light2", "dark1", "dark2"
 	title: {
-		text: "Valores recebidos x Valores a entregar -> R$",
+		text: "Valores recebidos x Valores a entregar → R$",
         fontSize:20,
 	},
 	data: [{
