@@ -100,10 +100,16 @@ html {
     width: 300px;
     justify-content: center;
     align-items: center;
-    opacity: 0%;
+    opacity: 80%;
+    font-weight: bold;
+    text-align: center;
     }
     .t-pagina-inicial:hover{
     opacity: 70%;
+    transition: 0.3s;
+    }
+    .btn-pagina-inicial:hover{
+        border: 2px solid rgb(0, 0, 0);
     }
     }
     /*layout celular na horizontal ajustando os itens para esse layout - index.html*/
@@ -133,11 +139,17 @@ html {
     width: 300px;
     justify-content: center;
     align-items: center;
-    opacity: 0%;
+    opacity: 80%;
+    font-weight: bold;
+    text-align: center;
     }
     .t-pagina-inicial:hover{
     opacity: 70%;
-    }                                       
+    transition: 0.3s;
+    }    
+    .btn-pagina-inicial:hover{
+        border: 2px solid black;
+    }                                   
                 
     }
     
@@ -478,6 +490,8 @@ html {
     display: flex;
     justify-content: center;
     text-align: center;
+    background-color: #0e0ef2;
+    margin-top: -2rem;
     }
     .btn-tamanho{
     display: flex;
@@ -487,7 +501,7 @@ html {
     flex-wrap: wrap;
     left: 30rem;
     top:1rem;
-    margin: px;
+    margin-top: 2rem;
     }
     #item{
     height: 15px;
@@ -520,8 +534,6 @@ html {
     display: flex; 
     background-color: transparent;
     height: 100px;
-    padding-left: 5px;
-    padding-top: 2px;
     justify-content: center;
     align-items: center;
     }
@@ -1128,4 +1140,8 @@ html {
         position: relative;
         left:0.5rem;
         top:1rem; 
+    }
+    .img-redes-sociais{
+        width: 40px;
+        height: 40px;
     }

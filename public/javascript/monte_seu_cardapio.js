@@ -583,7 +583,7 @@ socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionadoss_a
 
 
 qte_marmitas_a_fazer=document.getElementById("qte_marmitas_a_fazer").value
-
+console.log(dados_selecionadoss_atualizar_tela[0])
 
 
 let id_ = parseFloat(dados_selecionadoss_atualizar_tela[0]["qte_marmitas_fechadas"])

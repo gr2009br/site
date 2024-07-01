@@ -8,7 +8,7 @@ const server = http.createServer(app);
 import {Server} from 'socket.io'
 
 
-var environment_var=0
+var environment_var=1
 var porta
 //1 - usar credenciais locais
 //~ - usar variáveis de ambiente
