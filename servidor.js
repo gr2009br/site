@@ -13,7 +13,7 @@ var porta
 //1 - usar credenciais locais
 //~ - usar variáveis de ambiente
 
-if(environment_var===1){
+if(environment_var===0){
 porta=80
 //usar quando o site está local
 }else{
