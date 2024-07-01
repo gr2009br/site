@@ -553,6 +553,7 @@ if(valores_gramas_ingredientes==='0'){
     i.parentNode.getElementsByTagName('p')[0].innerHTML= `R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
         minimumFractionDigits:2, maximumFractionDigits:2,
     useGrouping:'always'}).format(0*parseFloat(0))}`
+    i.parentNode.classList.remove('ingrediente_gramas_maior_que_zero')
     
 
 }else{
