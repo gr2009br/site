@@ -20,11 +20,11 @@ var estrutura_dicionario = {}
 var ID=localStorage.getItem('ID SESSÃO')
 numero_randomico=parseInt(Math.random()*100000)
 socket.emit(`LER_DADOS_SELECIONADOS_OBTER_VALOR`,{idd:ID,n:numero_randomico})
-socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionadoss_atualizar_tela)=>{
+socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionados)=>{
 
 
-let valor_total_=dados_selecionadoss_atualizar_tela[0]['valor_total_cardapio_semanal']
-let vendas_=dados_selecionadoss_atualizar_tela[0]['itens_selecionados_cardapio_semanal']
+let valor_total_=dados_selecionados[0]['valor_total_cardapio_semanal']
+let vendas_=dados_selecionados[0]['itens_selecionados_cardapio_semanal']
 
 let vendas__=JSON.parse(vendas_)
 let count=0
@@ -158,7 +158,7 @@ let itens_selecionados=document.getElementById('lista_selecionada')
 
 document.getElementById("valor_total").innerHTML=`Valor total: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
             minimumFractionDigits:2, maximumFractionDigits:2,
-useGrouping:'always'}).format(parseFloat(dados_selecionadoss_atualizar_tela[0]['valor_total_ingredientes_total'])+parseFloat(dados_selecionadoss_atualizar_tela[0]['valor_total_cardapio_semanal']))}`
+useGrouping:'always'}).format(parseFloat(dados_selecionados[0]['valor_total_ingredientes_total'])+parseFloat(dados_selecionados[0]['valor_total_cardapio_semanal']))}`
 
 
 
@@ -269,7 +269,7 @@ document.getElementById("finalizar_kit_marmita").addEventListener("click",()=>{
 var ID=localStorage.getItem('ID SESSÃO')
 numero_randomico=parseInt(Math.random()*100000)
 socket.emit(`LER_DADOS_SELECIONADOS_OBTER_VALOR`,{idd:ID,n:numero_randomico})
-socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionadoss_atualizar_tela)=>{
+socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionados)=>{
    
     let tem_algum_item_selecionado=0
     let secao_item_selecionado=0
@@ -388,7 +388,7 @@ qte_marmitas = document.getElementById('quantidade_marmitas_semanais_cardapio_se
 
 
 
-itens_ja_adicionados=Object.values(JSON.parse(dados_selecionadoss_atualizar_tela[0]['itens_selecionados_cardapio_semanal']))
+itens_ja_adicionados=Object.values(JSON.parse(dados_selecionados[0]['itens_selecionados_cardapio_semanal']))
 
 for(let i=0;i<itens_ja_adicionados.length;i++){
 
@@ -401,7 +401,7 @@ for(let i=0;i<itens_ja_adicionados.length;i++){
         //return
     }
 }
-let id_item =Object.keys(JSON.parse(dados_selecionadoss_atualizar_tela[0]['itens_selecionados_cardapio_semanal']))
+let id_item =Object.keys(JSON.parse(dados_selecionados[0]['itens_selecionados_cardapio_semanal']))
 let id_item_tamanho=id_item.length+1
 
 texto_pedido = `Pedido ${id_item_tamanho} TRADICIONAL, Tamanho ${marmita.charAt(0)} ${TODOS_OS_ingrediente_selecionado}; quantidade: ${qte_marmitas}; subtotal: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
@@ -410,7 +410,7 @@ useGrouping:'always'}).format(qte_marmitas*valores_marmitas[tamanho_marmita])}`
 novo_paragrafo=document.createElement("p")
 itens_selecionados.appendChild(novo_paragrafo)
 novo_paragrafo.innerHTML=`<div class='item_da_lista_selecionada'>${texto_pedido} </select> <div onclick="remover_(this)" class='btn-excluir_EXCLUIR'><img class='btn-excluir' id ="${1}" src='./public/images/btn-excluir.png' onclick="remover(this)">Excluir</div>` 
-vendas__=JSON.parse(dados_selecionadoss_atualizar_tela[0]['itens_selecionados_cardapio_semanal'])
+vendas__=JSON.parse(dados_selecionados[0]['itens_selecionados_cardapio_semanal'])
 
 vendas__[id_item_tamanho]=texto_pedido
 valores_totais_cardapio_semanal=Object.values(vendas__)
@@ -425,28 +425,28 @@ valor_total_cardapio_semanal=soma
 
 document.getElementById("valor_total").innerHTML=`Valor total: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
 minimumFractionDigits:2,maximumFractionDigits:2,
-useGrouping:'always'}).format(parseFloat(dados_selecionadoss_atualizar_tela[0]['valor_total_ingredientes_total'])+valor_total_cardapio_semanal)}`
+useGrouping:'always'}).format(parseFloat(dados_selecionados[0]['valor_total_ingredientes_total'])+valor_total_cardapio_semanal)}`
 
 window.scrollTo(0,10000,'smooth')
 
 
 document.getElementById("finalizar_kit_marmita").innerText='Selecione um tamanho da marmita'
 
-id_selecionado=dados_selecionadoss_atualizar_tela[0]['id_edit_monte_seu_cardapio_final_inteiro']
-id_=dados_selecionadoss_atualizar_tela[0]['qte_marmitas_fechadas']
-valor_total_ingredientes_total=dados_selecionadoss_atualizar_tela[0]['valor_total_ingredientes_total']
+id_selecionado=dados_selecionados[0]['id_edit_monte_seu_cardapio_final_inteiro']
+id_=dados_selecionados[0]['qte_marmitas_fechadas']
+valor_total_ingredientes_total=dados_selecionados[0]['valor_total_ingredientes_total']
     socket.emit("INSERINDO_DADOS",{
     
     
         i0:ID,
         i1:id_selecionado,
         i2:0,
-        i3:dados_selecionadoss_atualizar_tela[0]['itens_selecionados_ingredientes_mar_fechada'],
+        i3:dados_selecionados[0]['itens_selecionados_ingredientes_mar_fechada'],
         i4:'',
         i5:valor_total_cardapio_semanal,
         i6:'',
         i7:'',
-        i8:dados_selecionadoss_atualizar_tela[0]['itens_selecionados_ingredientes'],
+        i8:dados_selecionados[0]['itens_selecionados_ingredientes'],
         i9:itens_selecionados_cardapio_semanal,
         i10:'',
         i11:id_,
@@ -475,7 +475,7 @@ document.getElementById('exibir-carrinho').addEventListener("click",()=>{
     numero_randomico=parseInt(Math.random()*100000)
     socket = io()   
     socket.emit(`LER_DADOS_SELECIONADOS_OBTER_VALOR`,{idd:ID,n:numero_randomico})
-    socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionadoss_atualizar_tela)=>{
+    socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionados)=>{
 
     
 
@@ -493,11 +493,11 @@ document.getElementById('exibir-carrinho').addEventListener("click",()=>{
             let  VALOR_TOTAL=0
             let soma4=0
 
-            let vendas_=dados_selecionadoss_atualizar_tela[0]['itens_selecionados_cardapio_semanal']
+            let vendas_=dados_selecionados[0]['itens_selecionados_cardapio_semanal']
             let vendas___=JSON.parse(vendas_)
 
 
-            let vendas_1=dados_selecionadoss_atualizar_tela[0]['itens_selecionados_ingredientes_mar_fechada']
+            let vendas_1=dados_selecionados[0]['itens_selecionados_ingredientes_mar_fechada']
             let vendas___1=JSON.parse(vendas_1)
     
             for(item in vendas___1){
@@ -879,7 +879,7 @@ function editar(elemento){
     
     numero_randomico=parseInt(Math.random()*100000)
     socket.emit(`LER_DADOS_SELECIONADOS_OBTER_VALOR`,{idd:ID,n:numero_randomico})
-    socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionadoss_atualizar_tela)=>{
+    socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionados)=>{
     
         
     
@@ -887,8 +887,8 @@ function editar(elemento){
     
     
     
-    let id_ = parseFloat(dados_selecionadoss_atualizar_tela[0]["qte_marmitas_fechadas"])
-    let  itens_selecionados_ingredientes=JSON.parse(dados_selecionadoss_atualizar_tela[0]['itens_selecionados_ingredientes_mar_fechada'])
+    let id_ = parseFloat(dados_selecionados[0]["qte_marmitas_fechadas"])
+    let  itens_selecionados_ingredientes=JSON.parse(dados_selecionados[0]['itens_selecionados_ingredientes_mar_fechada'])
     ISI = itens_selecionados_ingredientes[id_selecionado]
     
     
@@ -899,13 +899,13 @@ function editar(elemento){
         i0:ID,
         i1:id_selecionado,
         i2:0,
-        i3:dados_selecionadoss_atualizar_tela[0]['itens_selecionados_ingredientes_mar_fechada'],
+        i3:dados_selecionados[0]['itens_selecionados_ingredientes_mar_fechada'],
         i4:'',
-        i5:parseFloat(dados_selecionadoss_atualizar_tela[0]['valor_total_cardapio_semanal']),
+        i5:parseFloat(dados_selecionados[0]['valor_total_cardapio_semanal']),
         i6:'',
         i7:'',
         i8:JSON.stringify(ISI),
-        i9:dados_selecionadoss_atualizar_tela[0]['itens_selecionados_cardapio_semanal'],
+        i9:dados_selecionados[0]['itens_selecionados_cardapio_semanal'],
         i10:'',
         i11:id_,
         i12:0,
@@ -1147,9 +1147,9 @@ function remover_(elemento){
 ID=localStorage.getItem("ID SESSÃO")
 numero_randomico=parseInt(Math.random()*100000)
 socket.emit(`LER_DADOS_SELECIONADOS_OBTER_VALOR`,{idd:ID,n:numero_randomico})
-socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionadoss_atualizar_tela)=>{
+socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionados)=>{
 
-vendas__=JSON.parse(dados_selecionadoss_atualizar_tela[0]['itens_selecionados_cardapio_semanal'])
+vendas__=JSON.parse(dados_selecionados[0]['itens_selecionados_cardapio_semanal'])
 
 
 elemento.parentNode.remove()
@@ -1173,28 +1173,28 @@ itens_selecionados_cardapio_semanal=JSON.stringify(vendas__)
 valor_total_cardapio_semanal=soma
 
 
-valor_total_TUDO=parseFloat(dados_selecionadoss_atualizar_tela[0]['valor_total_ingredientes_total'])+soma
+valor_total_TUDO=parseFloat(dados_selecionados[0]['valor_total_ingredientes_total'])+soma
 
 
 document.getElementById("valor_total").innerHTML=`Valor total: R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
 minimumFractionDigits:2,maximumFractionDigits:2,
-useGrouping:'always'}).format(parseFloat(dados_selecionadoss_atualizar_tela[0]['valor_total_ingredientes_total'])+parseFloat(dados_selecionadoss_atualizar_tela[0]['valor_total_cardapio_semanal']))}`
+useGrouping:'always'}).format(parseFloat(dados_selecionados[0]['valor_total_ingredientes_total'])+parseFloat(dados_selecionados[0]['valor_total_cardapio_semanal']))}`
 
-id_selecionado=dados_selecionadoss_atualizar_tela[0]['id_edit_monte_seu_cardapio_final_inteiro']
-id_=dados_selecionadoss_atualizar_tela[0]['qte_marmitas_fechadas']
-valor_total_ingredientes_total=dados_selecionadoss_atualizar_tela[0]['valor_total_ingredientes_total']
+id_selecionado=dados_selecionados[0]['id_edit_monte_seu_cardapio_final_inteiro']
+id_=dados_selecionados[0]['qte_marmitas_fechadas']
+valor_total_ingredientes_total=dados_selecionados[0]['valor_total_ingredientes_total']
 socket.emit("INSERINDO_DADOS",{
 
 
 i0:ID,
 i1:id_selecionado,
 i2:0,
-i3:dados_selecionadoss_atualizar_tela[0]['itens_selecionados_ingredientes_mar_fechada'],
+i3:dados_selecionados[0]['itens_selecionados_ingredientes_mar_fechada'],
 i4:'',
 i5:valor_total_cardapio_semanal,
 i6:'',
 i7:'',
-i8:dados_selecionadoss_atualizar_tela[0]['itens_selecionados_ingredientes'],
+i8:dados_selecionados[0]['itens_selecionados_ingredientes'],
 i9:itens_selecionados_cardapio_semanal,
 i10:'',
 i11:id_,
