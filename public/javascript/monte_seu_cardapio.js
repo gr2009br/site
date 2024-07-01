@@ -559,14 +559,14 @@ if(valores_gramas_ingredientes==='0'){
     i.parentNode.getElementsByTagName('p')[0].innerHTML= `R$ ${Intl.NumberFormat("pt-BR",{style:'decimal',
         minimumFractionDigits:2, maximumFractionDigits:2,
     useGrouping:'always'}).format(parseFloat(valores[i.parentNode.getElementsByTagName('button')[0].innerHTML][i.value.replace(" g","")]))}`
+    i.parentNode.classList.add('ingrediente_gramas_maior_que_zero')
     
 
-
 }
 
 
 }
-
+  
 }
 
 //OBTER GRAMA SELECIONADA AO CLICAR NO INGREDIENTE
@@ -583,7 +583,7 @@ socket.on(`SELECIONANDO_DADOS_OBTIDOS${numero_randomico}`,(dados_selecionadoss_a
 
 
 qte_marmitas_a_fazer=document.getElementById("qte_marmitas_a_fazer").value
-console.log(dados_selecionadoss_atualizar_tela[0])
+elemento.parentNode.classList.remove('ingrediente_gramas_maior_que_zero')
 
 
 let id_ = parseFloat(dados_selecionadoss_atualizar_tela[0]["qte_marmitas_fechadas"])
@@ -662,7 +662,7 @@ lista_id_ingredientes = document.getElementsByTagName('label')
 
 
 
-
+elemento.parentNode.childNodes[2].value='0'
 switch(gramas){
 case '75':
 
@@ -1031,7 +1031,7 @@ nome_elemento=nome_elemento.replace("CARBOIDRATOS ",'').replace("PROTEINAS ",'')
         document.getElementById('lista_proteinas').parentNode.classList.remove('escurecer_bloco') 
         document.getElementById('lista_proteinas').parentNode.classList.add('blocos')
         document.getElementById('lista_proteinas').parentNode.childNodes[3].textContent='Selecione o peso e clique no ingrediente desejado:'
-    
+        
     }
 }
 for(k in carboidratos_______){

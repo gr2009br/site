@@ -1145,3 +1145,6 @@ html {
         width: 40px;
         height: 40px;
     }
+    .ingrediente_gramas_maior_que_zero{
+        background-color: red;
+    }
