@@ -375,3 +375,23 @@ function marcar_como_entregue(elemento){
     }
 
 }
+
+
+function  QRCODE(){
+
+
+    let texto_qr_code=`https://site-82eg.onrender.com`
+    let typeNumber = 4;
+    let errorCorrectionLevel = 'L';
+    let qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData(texto_qr_code);
+    qr.make();
+    let formatar_HTML = qr.createImgTag().replace("img ","img id='qrCodeSite'")
+    document.getElementById('qrCodeSite').innerHTML =formatar_HTML
+    document.getElementById('qrCodeSite').classList.add("qr_code-site")
+    
+
+    
+    }
+
+    QRCODE()
