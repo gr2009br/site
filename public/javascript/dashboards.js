@@ -49,6 +49,7 @@ var valoressssss_mm=[]
 var tipo_pagamento=[]
 var troco=[]
 var lista_ids_sockets_criados=[]
+var listadositenspedidos=''
 socket.on('ler_mysql',(dado)=>{
     let i=[]
     
@@ -102,7 +103,7 @@ for(let i in dado){
     
 }
 
-var listadositenspedidos
+
 var tudo_foi_entregue=true
 lista=itens.split(' ;;; ')
 
