@@ -277,6 +277,7 @@ qte_pedidos=lista.length-1
 
 
         }
+        console.log(listadositenspedidos)
         
 
 
