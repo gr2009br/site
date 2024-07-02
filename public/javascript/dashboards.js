@@ -379,7 +379,7 @@ function marcar_como_entregue(elemento){
 }
 
 
-function  QRCODE(qrcode){
+function  QRCODE(){
 
 
     let texto_qr_code=`https://site-82eg.onrender.com`
