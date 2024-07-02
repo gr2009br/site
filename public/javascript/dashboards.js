@@ -277,7 +277,7 @@ qte_pedidos=lista.length-1
 
 
         }
-        console.log(listadositenspedidos)
+      
         document.getElementById("itens_dashboard").innerHTML+=listadositenspedidos
 
 
