@@ -278,7 +278,7 @@ qte_pedidos=lista.length-1
 
         }
         console.log(listadositenspedidos)
-        
+        document.getElementById("itens_dashboard").innerHTML+=listadositenspedidos
 
 
         }
@@ -289,7 +289,7 @@ qte_pedidos=lista.length-1
     }
     
 
-    document.getElementById("itens_dashboard").innerHTML=listadositenspedidos
+    
 
 
 document.getElementById('itens_dashboard1').innerHTML=`<div style='font-size:1.1rem;'>Total de Pedidos<br><br><strong>${qte_pedidos}</div>`
